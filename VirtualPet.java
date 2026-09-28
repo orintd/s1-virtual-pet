@@ -33,7 +33,14 @@ public class VirtualPet {
     
     public void sleep() {
         hunger = hunger + 1;
+        face.setMessage("Zzz...");
         face.setImage("asleep");
+    }
+
+    public void clangWolf(){
+        hunger += 10;
+        face.setMessage("Clanging Wolf... CLANG! CLANG! CLANG! Oh yeah baby.");
+        face.setImage("love");
     }
 
 } // end Virtual Pet

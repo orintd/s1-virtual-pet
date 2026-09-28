@@ -5,6 +5,23 @@ public class VPmain {
     
     public VPmain(){
         vp.feed();
+        vp.exercise();
+        this.waitABeat(1000);
+        String ans = this.askForInput("Are you ready for sleep?");
+        if(ans.equals("yes")){
+            vp.sleep();
+        }
+        else{
+            vp.exercise();
+        }
+        this.waitABeat(1000);
+        String ans1 = this.askForInput("Do you want to clang Wolf?");
+        if(ans1.equals("yes")){
+            vp.clangWolf();
+        }
+        else{
+            vp.sleep();
+        }
     }
 
     public void waitABeat(int ms){
