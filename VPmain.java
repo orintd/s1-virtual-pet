@@ -1,10 +1,10 @@
 import javax.swing.*;
 
-public class VPMain {
+public class VPmain {
     VirtualPet vp = new VirtualPet();
     
-    public VPMain(){
-        vp.feed()
+    public VPmain(){
+        vp.feed();
     }
 
     public void waitABeat(int ms){
@@ -26,7 +26,7 @@ public class VPMain {
     }
 
     public static void main(String[] args) {
-        new VPMain();    
+        new VPmain();    
     }
 }
 
