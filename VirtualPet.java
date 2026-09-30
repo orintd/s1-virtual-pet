@@ -7,7 +7,8 @@ public class VirtualPet {
     
     VirtualPetFace face;
     int hunger = 0;   // how hungry the pet is.
-    
+    boolean stinky = false;
+    boolean wolfHateU = false;
     // constructor
     public VirtualPet() {
         face = new VirtualPetFace();
@@ -22,7 +23,6 @@ public class VirtualPet {
             hunger = 0;
         }
         face.setMessage("Yum, thanks");
-        face.setImage("normal");
     }
     
     public void exercise() {
@@ -36,11 +36,74 @@ public class VirtualPet {
         face.setMessage("Zzz...");
         face.setImage("asleep");
     }
+    
+    public void morning(){
+        hunger += 5;
+        face.setMessage("Bad morning.");
+        face.setImage("normal");
+    }
 
-    public void clangWolf(){
+    public void hiWolf(){
         hunger += 10;
-        face.setMessage("Clanging Wolf... CLANG! CLANG! CLANG! Oh yeah baby.");
+        face.setMessage("Yo, wassup Wolf.");
+        face.setImage("happy");
+    }
+    public void brushTeeth(){
+        face.setMessage("Mmm, minty fresh.");
         face.setImage("love");
     }
+    public void stinkyChud(){
+        face.setMessage("Wow, you're a stinky bum.");
+        face.setImage("verysick");
+        this.stinky = true;
+    }
+
+    public void shower(){
+        face.setMessage("Showering... why are you watching?");
+        face.setImage("enraged");
+        this.stinky = false;
+    }
+
+    public void cereal(){
+        face.setMessage("I'm feining for some Cinnamon Toast Crunch.");
+        face.setImage("hungry");
+    }
+
+    public void raisinBran(){
+        face.setMessage("Yum, Raisin Bran... is what I would say if I was 90 years old!");
+        this.hunger = 1000;
+        face.setImage("starving");
+    }
+
+    public void tjTrash(){
+        face.setMessage("Trader Joe's cereal is kinda butt, so imma eat some of that Cinnamon Toast Crunch!");
+    }
+
+    public void cinnamonToastCrunch(){
+        face.setMessage("YOO CINNAMON TOAST CRUNCH THE GOAT!!!");
+        this.feed();
+        face.setImage("love");
+    }
+
+    public void dumbStupid(){
+        face.setMessage("Bro, read the question next time, ya dumb stupid.");
+        face.setImage("sad");
+    }
+
+    public void phoneLinging(){
+        face.setMessage("Ouu shi, Wolf calling my phone.");
+        face.setImage("astonished");
+    }
+
+    public void wolfHi(){
+        face.setMessage("Wolf: What's up my dude.");
+        face.setImage("surprised");
+    }
+
+    public void wolfHateU(){
+        face.setMessage("Wolf hates you... wrong move.");
+        face.setImage("enraged");
+    }
+    
 
 } // end Virtual Pet

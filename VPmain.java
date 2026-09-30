@@ -4,23 +4,59 @@ public class VPmain {
     VirtualPet vp = new VirtualPet();
     
     public VPmain(){
-        vp.feed();
+        vp.sleep();
+        waitABeat(500);
+        vp.morning();
+        waitABeat(500);
+        String a = this.askForInput("Do you want to brush your teeth?");
+        a=a.toLowerCase();
+        if(a.equals("yes")){
+            vp.brushTeeth();
+        }
+        else{
+            vp.stinkyChud();
+        }
+        waitABeat(500);
+        if (vp.stinky == true){
+            String b = this.askForInput("Since your nasty ass doesn't want to brush your teeth in the morning, will you at least shower?");
+            b=b.toLowerCase();
+            if(b.equals("yes")){
+                vp.shower();
+            }
+            else{
+                vp.stinkyChud();
+            }
+        }
+        waitABeat(500);
+        vp.cereal();
+        waitABeat(1000);
+        String c = this.askForInput("Cinnamon Toast Crunch, Raisin Bran, or Trader Joe's?");
+        c=c.toLowerCase();
+        if (c.equals("raisin bran")){
+            vp.raisinBran();
+        }
+        else if (c.equals("trader joe's")){
+            vp.tjTrash();
+        }
+        else if (!c.equals("cinnamon toast crunch")){
+            vp.dumbStupid();
+        }
+        if(c.equals("trader joe's") || c.equals("cinnamon toast crunch")){
+            vp.cinnamonToastCrunch();
+        }
+        waitABeat(500);
         vp.exercise();
-        this.waitABeat(1000);
-        String ans = this.askForInput("Are you ready for sleep?");
-        if(ans.equals("yes")){
-            vp.sleep();
+        waitABeat(2000);
+        vp.phoneLinging();
+        waitABeat(2000);
+        vp.wolfHi();
+        waitABeat(1000);
+        String d = this.askForInput("Are you going to say hi to your boy?");
+        if (d.equals("yes")){
+            vp.hiWolf();
         }
         else{
-            vp.exercise();
-        }
-        this.waitABeat(1000);
-        String ans1 = this.askForInput("Do you want to clang Wolf?");
-        if(ans1.equals("yes")){
-            vp.clangWolf();
-        }
-        else{
-            vp.sleep();
+            vp.wolfHateU();
         }
     }
 
@@ -41,6 +77,8 @@ public class VPmain {
         );
         return s;
     }
+
+    
 
     public static void main(String[] args) {
         new VPmain();    
