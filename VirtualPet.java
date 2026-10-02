@@ -9,6 +9,8 @@ public class VirtualPet {
     int hunger = 0;   // how hungry the pet is.
     boolean stinky = false;
     boolean wolfHateU = false;
+    boolean nastyAF = false;
+    boolean grossTeeth = false;
     // constructor
     public VirtualPet() {
         face = new VirtualPetFace();
@@ -27,7 +29,7 @@ public class VirtualPet {
     
     public void exercise() {
         hunger = hunger + 3;
-        face.setMessage("1, 2, 3, jump.  Whew.");
+        face.setMessage("Time to exercise!");
         face.setImage("tired");
     }
     
@@ -51,16 +53,20 @@ public class VirtualPet {
     public void brushTeeth(){
         face.setMessage("Mmm, minty fresh.");
         face.setImage("love");
+        this.grossTeeth = false;
     }
     public void stinkyChud(){
-        face.setMessage("Wow, you're a stinky bum.");
+        face.setMessage("Wow, you're stinky.");
         face.setImage("verysick");
         this.stinky = true;
+        if (this.stinky && this.grossTeeth){
+            this.nastyAF = true;
+        }
     }
 
     public void shower(){
-        face.setMessage("Showering... why are you watching?");
-        face.setImage("enraged");
+        face.setMessage("Showering...");
+        face.setImage("normal");
         this.stinky = false;
     }
 
@@ -70,7 +76,7 @@ public class VirtualPet {
     }
 
     public void raisinBran(){
-        face.setMessage("Yum, Raisin Bran... is what I would say if I was 90 years old!");
+        face.setMessage("Raisin Bran... ewww");
         this.hunger = 1000;
         face.setImage("starving");
     }
@@ -86,23 +92,51 @@ public class VirtualPet {
     }
 
     public void dumbStupid(){
-        face.setMessage("Bro, read the question next time, ya dumb stupid.");
+        face.setMessage("Can you read the question next time?");
         face.setImage("sad");
     }
 
     public void phoneLinging(){
         face.setMessage("Ouu shi, Wolf calling my phone.");
-        face.setImage("astonished");
+        face.setImage("call");
     }
 
     public void wolfHi(){
-        face.setMessage("Wolf: What's up my dude.");
+        face.setMessage("Wolf: What's up.");
         face.setImage("surprised");
     }
 
     public void wolfHateU(){
         face.setMessage("Wolf hates you... wrong move.");
         face.setImage("enraged");
+    }
+
+    public void wolfParty(){
+        face.setMessage("Wolf: I'm having a birthday party. Do you want to come?");
+        face.setImage("call");
+    }
+
+    public void wolfSlimeYouOut(){
+        face.setMessage("Wolf slimed you out. Womp womp.");
+        face.setImage("skeleton");
+    }
+    
+    public void grave(){
+        face.setImage("pushingdaisies");
+    }
+
+    public void quit(){
+        System.exit(0);
+    }
+
+    public void bet(){
+        face.setMessage("Wolf: Bet, I'll come pick you up.  I'll be outside your house in 15.");
+        face.setMessage("ecstatic");
+    }
+
+    public void cih(){
+        face.setMessage("Wolf pulls up out front in his Rallye Red 2026 Honda Civic Sport.");
+        face.setImage("surprised");
     }
     
 
