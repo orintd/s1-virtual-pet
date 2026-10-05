@@ -37,6 +37,7 @@ public class VPmain {
         }
         else if (c.equals("trader joe's")){
             vp.tjTrash();
+            waitABeat(2000);
         }
         else if (!c.equals("cinnamon toast crunch")){
             vp.dumbStupid();
@@ -44,7 +45,7 @@ public class VPmain {
         if(c.equals("trader joe's") || c.equals("cinnamon toast crunch")){
             vp.cinnamonToastCrunch();
         }
-        waitABeat(1000);
+        waitABeat(2000);
         vp.exercise();
         waitABeat(2000);
         vp.phoneLinging();
