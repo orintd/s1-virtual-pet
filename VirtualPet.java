@@ -24,7 +24,7 @@ public class VirtualPet {
         } else {
             hunger = 0;
         }
-        face.setMessage("Yum, thanks");
+        face.setMessage("Yo thanks bruh");
     }
     
     public void exercise() {
@@ -131,13 +131,41 @@ public class VirtualPet {
 
     public void bet(){
         face.setMessage("Wolf: Bet, I'll come pick you up.  I'll be outside your house in 15.");
-        face.setMessage("ecstatic");
+        face.setImage("ecstatic");
     }
 
     public void cih(){
         face.setMessage("Wolf pulls up out front in his Rallye Red 2026 Honda Civic Sport.");
         face.setImage("surprised");
     }
-    
 
+    public void chase(){
+        face.setMessage("Oh crap, you messed up. Wolf hates you... maybe you're a bad friend or you're nasty AF. Either way, he's chasing you, so RUN FOR YOUR LIFE!");
+        face.setImage("shocked");
+    }
+    
+    public void tooSlow(){
+        face.setMessage("Shouldn't have eaten Raisin Bran this morning... you were too slow to run away...");
+        face.setImage("exercising");
+    }
+
+    public void escape(){
+        face.setMessage("Thank goodness you ate Cinnamon Toast Crunch this morning... it was the only thing that gave you enough energy to escape from Wolf.");
+        face.setImage("sad");
+    }
+
+    public void deodorant(){
+        face.setMessage("Wolf: Dude you stink, put on some deodorant.");
+        face.setImage("verysad");
+    }
+
+    public void welcome(){
+        face.setMessage("Wolf: Yoo dude, thank you so much for coming to my birthday party! You're my bestest friend in the whole wide world.");
+        face.setImage("ecstatic");
+    }
+    
+    public void partySoTuff(){
+        face.setMessage("You went to Wolf's birthday party and you had an epic time!");
+        face.setMessage("love");
+    }
 } // end Virtual Pet

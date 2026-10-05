@@ -74,9 +74,35 @@ public class VPmain {
             waitABeat(1000);
             vp.quit();
         }
-        waitABeat(1000);
+        waitABeat(2000);
         vp.cih();
         waitABeat(2000);
+        if(vp.wolfHateU || vp.nastyAF){
+            vp.chase();
+            waitABeat(3000);
+            if (vp.hunger >= 100){
+                vp.tooSlow();
+                waitABeat(2500);
+                vp.wolfSlimeYouOut();
+                waitABeat(2000);
+                vp.grave();
+                waitABeat(1000);
+                vp.quit();
+            }
+            vp.escape();
+            waitABeat(3000);
+            vp.quit();
+        }
+        else if (vp.stinky){
+            vp.deodorant();
+            waitABeat(2000);
+        }
+        else{
+            vp.welcome();
+        }
+        vp.partySoTuff();
+        waitABeat(2500);
+        vp.quit();
     }
 
     public void waitABeat(int ms){
