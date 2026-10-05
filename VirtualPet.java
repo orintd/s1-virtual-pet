@@ -166,6 +166,6 @@ public class VirtualPet {
     
     public void partySoTuff(){
         face.setMessage("You went to Wolf's birthday party and you had an epic time!");
-        face.setMessage("love");
+        face.setImage("love");
     }
 } // end Virtual Pet
