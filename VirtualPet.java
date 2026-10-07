@@ -10,7 +10,7 @@ public class VirtualPet {
     boolean stinky = false;
     boolean wolfHateU = false;
     boolean nastyAF = false;
-    boolean grossTeeth = false;
+    boolean grossTeeth = true;
     // constructor
     public VirtualPet() {
         face = new VirtualPetFace();
@@ -109,6 +109,7 @@ public class VirtualPet {
     public void wolfHateU(){
         face.setMessage("Wolf hates you... wrong move.");
         face.setImage("enraged");
+        this.wolfHateU = true;
     }
 
     public void wolfParty(){
@@ -140,7 +141,7 @@ public class VirtualPet {
     }
 
     public void chase(){
-        face.setMessage("Oh crap, you messed up. Wolf hates you... maybe you're a bad friend or you're nasty AF. Either way, he's chasing you, so RUN FOR YOUR LIFE!");
+        face.setMessage("Oh crap, you messed up. Wolf hates you... he's chasing you, so RUN FOR YOUR LIFE!");
         face.setImage("shocked");
     }
     

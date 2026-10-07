@@ -77,8 +77,8 @@ public class VPmain {
         }
         waitABeat(2000);
         vp.cih();
-        waitABeat(2000);
-        if(vp.wolfHateU == true|| vp.nastyAF == true){
+        waitABeat(1000);
+        if(vp.wolfHateU || vp.nastyAF){
             vp.chase();
             waitABeat(3000);
             if (vp.hunger >= 100){
